@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Verify that valid user able to login into Mercurytours application by using valid credentials(failed)">
+    <parameter name="password" value="P@ssword1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://newtours.demoaut.com/mercurywelcome.php"/>
+    <parameter name="timeout" value="15"/>
+    <parameter name="username" value="Suvidyap1"/>
+    <classes>
+      <class name="mt.mstours.modules.Login">
+        <methods>
+          <include name="ExecuteLoginwithvalid" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- mt.mstours.modules.Login -->
+    </classes>
+  </test> <!-- Verify that valid user able to login into Mercurytours application by using valid credentials(failed) -->
+  <test thread-count="5" name="Verify that invalid user able to login into Mercurytours application by using valid credentials(failed)">
+    <parameter name="usernm" value="Suvidyap"/>
+    <parameter name="passwd" value="Password"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://newtours.demoaut.com/mercurywelcome.php"/>
+    <parameter name="timeout" value="15"/>
+    <classes>
+      <class name="mt.mstours.modules.Login">
+        <methods>
+          <include name="ExecuteLoginwithinvalid" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- mt.mstours.modules.Login -->
+    </classes>
+  </test> <!-- Verify that invalid user able to login into Mercurytours application by using valid credentials(failed) -->
+</suite> <!-- Failed suite [Suite] -->

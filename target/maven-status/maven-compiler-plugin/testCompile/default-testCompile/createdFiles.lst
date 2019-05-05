@@ -1,0 +1,8 @@
+mt\mstours\pages\Loginpage.class
+mt\mstours\modules\LauchApp.class
+mt\mstours\utility\CloseBrowser.class
+mt\mstours\config\Config.class
+mt\mstours\testexecution\Testcaseexecution.class
+mt\mstours\utility\Launch.class
+mt\mstours\pages\FlightFinderpage.class
+mt\mstours\modules\Login.class

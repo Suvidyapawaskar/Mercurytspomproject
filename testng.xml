@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Verify that valid user able to login into Mercurytours application by using valid credentials">
+  <parameter name="browser" value="chrome"></parameter>
+  <parameter name="url" value="http://newtours.demoaut.com/mercurywelcome.php"></parameter>
+  <parameter name="timeout" value="15"></parameter>
+  <parameter name="username" value="Suvidyap1"></parameter>
+  <parameter name="password" value="P@ssword1"></parameter>
+     <classes>
+      <class name="mt.mstours.modules.LauchApp">
+      <methods>
+      <include name="executeLauchApp"></include>
+      </methods>
+      </class>
+      <class name="mt.mstours.modules.Login">
+      <methods>
+      <include name="ExecuteLoginwithvalid"></include>
+      </methods>
+      </class>
+      <class name="mt.mstours.utility.CloseBrowser">
+      <methods>
+      <include name="closeBrowser"></include>
+      </methods>
+      </class>
+    </classes>
+    </test>
+    
+  <test thread-count="5" name="Verify that invalid user able to login into Mercurytours application by using valid credentials">
+  <parameter name="browser" value="chrome"></parameter>
+  <parameter name="url" value="http://newtours.demoaut.com/mercurywelcome.php"></parameter>
+  <parameter name="timeout" value="15"></parameter>
+  <parameter name="usernm" value="Suvidyap"></parameter>
+  <parameter name="passwd" value="Password"></parameter>
+    <classes>
+      <class name="mt.mstours.modules.LauchApp">
+      <methods>
+      <include name="executeLauchApp"></include>
+      </methods>
+      </class>
+      <class name="mt.mstours.modules.Login">
+      <methods>
+      <exclude name="ExecuteLoginwithvalid"></exclude>
+      </methods>
+      </class>
+      <class name="mt.mstours.utility.CloseBrowser">
+      <methods>
+      <include name="closeBrowser"></include>
+      </methods>
+      </class>
+    </classes>   
+        
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
